@@ -1,5 +1,5 @@
 # WhatsApp
-Send Messages to Whatsapp with Python
+Send Text Messages to Whatsapp with Python
 
 
 1.Initially install selenium
