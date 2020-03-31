@@ -32,7 +32,7 @@ stages:
           - script: echo Hello, world!
             displayName: 'Run a one-line script'
 - stage: Stage3
-  dependsOn: [Stage2]
+  dependsOn: []
   jobs: 
   - deployment: DeployPPE
     environment: env
