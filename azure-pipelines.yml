@@ -2,7 +2,7 @@ stages:
 - stage: Stage1
   jobs: 
   - deployment: DeployPPE
-    environment: env
+    environment: ganes-test-env
     pool: 'Default'
     strategy:
       runOnce:
@@ -10,36 +10,3 @@ stages:
           steps:
           - script: echo Hello, world!
             displayName: 'Run a one-line script'
-  - deployment: DeployPPE1
-    environment: env
-    pool: 'Default'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo Hello, world!
-            displayName: 'Run a one-line script'
-- stage: Stage2
-  dependsOn: [Stage1]
-  jobs: 
-  - deployment: DeployPPE
-    environment: ganes
-    pool: 'Default'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo Hello, world!
-            displayName: 'Run a one-line script'
-- stage: Stage3
-  dependsOn: []
-  jobs: 
-  - deployment: DeployPPE
-    environment: env
-    pool: 'Default'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo Hello, world!
-            displayName: 'Run a one-line script'            
