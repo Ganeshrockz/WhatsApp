@@ -3,7 +3,7 @@ stages:
   jobs: 
   - deployment: DeployPPE
     environment: ganes-test-env
-    pool: 'Default'
+    pool: 'Azure pipelines'
     strategy:
       runOnce:
         deploy:
