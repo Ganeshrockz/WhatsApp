@@ -3,7 +3,7 @@ stages:
   jobs: 
   - deployment: DeployPPE
     environment: ganes-test-env
-    pool: 'Azure pipelines'
+    pool: 'ankhokha'
     strategy:
       runOnce:
         deploy:
