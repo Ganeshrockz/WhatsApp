@@ -3,7 +3,7 @@ stages:
   jobs: 
   - deployment: DeployPPE
     environment: test_env_1
-    pool: 'Default'
+    pool: 'ankhokha'
     strategy:
       runOnce:
         deploy:
@@ -15,7 +15,7 @@ stages:
   jobs: 
   - deployment: DeployPPE
     environment: test_env_1
-    pool: 'Default'
+    pool: 'ankhokha'
     strategy:
       runOnce:
         deploy:
