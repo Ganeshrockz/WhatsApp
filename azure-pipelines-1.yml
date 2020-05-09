@@ -1,0 +1,24 @@
+stages:
+- stage: Stage1
+  jobs: 
+  - deployment: DeployPPE
+    environment: test_env_1
+    pool: 'Default'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Hello, world!
+            displayName: 'Run a one-line script'
+- stage: Stage2
+  dependsOn: []
+  jobs: 
+  - deployment: DeployPPE
+    environment: test_env_1
+    pool: 'Default'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo Hello, world!
+            displayName: 'Run a one-line script'
