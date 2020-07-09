@@ -1,0 +1,9 @@
+stages:
+- stage: Stage1
+  jobs:
+  - job: Sample 
+    pool: 'Server'
+    steps:
+    - task: Delay@1
+      inputs:
+        delayForMinutes: '0'
